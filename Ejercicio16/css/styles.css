@@ -1,0 +1,20 @@
+#box {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#borde {
+    width: 15%;
+    height: 30%;
+    display: flex;
+    border: solid 1px;
+    align-items: center;
+    justify-content: center;
+}
+
+#reloj {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

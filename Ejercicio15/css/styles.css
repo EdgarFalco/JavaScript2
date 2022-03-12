@@ -1,0 +1,36 @@
+#titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: #fef6ff;
+}
+
+h1 {
+    text-align: center;
+}
+
+#menu {
+    float: left;
+    width: 20%;
+}
+
+#menu img {
+    width: 35%;
+    /* Cambia el cursor */
+    cursor: pointer;
+}
+
+#principal {
+    float: left;
+    width: 75%;
+}
+
+#foto-grande {
+    height: 300px;
+    width: 400px;
+    margin-top: 4%;
+    margin-left: 25%;
+}
+
+#info {
+    text-align: center;
+}
