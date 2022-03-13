@@ -1,14 +1,173 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Script</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
-    <script src='js/script.js'></script>
-</head>
-<body>
-    <p>Esta página contiene el primer script</p>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Calculadora</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="css/styles.css"
+        />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="box">
+            <div class="calculadora">
+                <form name="calculadora" id="calculadora">
+                    <p>
+                        <input type="Text" name="visor" id="textoPantalla" />
+                    </p>
+                    <p>
+                        <input
+                            class="superior"
+                            type="button"
+                            name="Retr"
+                            value="Retr"
+                            Onclick="retr(calculadora.visor,textoVisor)"
+                        />
+                        <input
+                            class="superior"
+                            type="button"
+                            name="Ce"
+                            value="CE"
+                            Onclick="c(calculadora.visor,textoVisor)"
+                        />
+                        <input
+                            class="superior"
+                            type="button"
+                            name="C"
+                            value="C"
+                            Onclick="c(calculadora.visor,textoVisor)"
+                        />
+                    </p>
+                    <p>
+                        <input
+                            type="button"
+                            name="7"
+                            value="7"
+                            Onclick="anadirNumero(calculadora.visor,7)"
+                        />
+                        <input
+                            type="button"
+                            name="8"
+                            value="8"
+                            Onclick="anadirNumero(calculadora.visor,8)"
+                        />
+                        <input
+                            type="button"
+                            name="9"
+                            value="9"
+                            Onclick="anadirNumero(calculadora.visor,9)"
+                        />
+                        <input
+                            type="button"
+                            name="/"
+                            value="/"
+                            Onclick="hacerOperacion(calculadora.visor,'/')"
+                        />
+                        <input
+                            type="button"
+                            name="Raíz"
+                            value="Raíz"
+                            Onclick="raiz(calculadora.visor,textoVisor)"
+                        />
+                    </p>
+                    <p>
+                        <input
+                            type="button"
+                            name="4"
+                            value="4"
+                            Onclick="anadirNumero(calculadora.visor,4)"
+                        />
+                        <input
+                            type="button"
+                            name="5"
+                            value="5"
+                            Onclick="anadirNumero(calculadora.visor,5)"
+                        />
+                        <input
+                            type="button"
+                            name="6"
+                            value="6"
+                            Onclick="anadirNumero(calculadora.visor,6)"
+                        />
+                        <input
+                            type="button"
+                            name="*"
+                            value="*"
+                            Onclick="hacerOperacion(calculadora.visor,'*')"
+                        />
+                        <input
+                            type="button"
+                            name="%"
+                            value="%"
+                            Onclick="porcentaje(calculadora.visor,textoVisor)"
+                        />
+                    </p>
+                    <p>
+                        <input
+                            type="button"
+                            name="1"
+                            value="1"
+                            Onclick="anadirNumero(calculadora.visor,1)"
+                        />
+                        <input
+                            type="button"
+                            name="2"
+                            value="2"
+                            Onclick="anadirNumero(calculadora.visor,2)"
+                        />
+                        <input
+                            type="button"
+                            name="3"
+                            value="3"
+                            Onclick="anadirNumero(calculadora.visor,3)"
+                        />
+                        <input
+                            type="button"
+                            name="-"
+                            value="-"
+                            Onclick="hacerOperacion(calculadora.visor,'-')"
+                        />
+                        <input
+                            type="button"
+                            name="1/x"
+                            value="1/x"
+                            Onclick="inversa(calculadora.visor,textoVisor)"
+                        />
+                    </p>
+                    <p>
+                        <input
+                            type="button"
+                            name="0"
+                            value="0"
+                            Onclick="anadirNumero(calculadora.visor,0)"
+                        />
+                        <input id="vacio" type="button" value=" " />
+                        <input
+                            type="button"
+                            name="+/-"
+                            value="+/-"
+                            Onclick="masmenos(calculadora.visor,textoVisor)"
+                        />
+                        <input
+                            type="button"
+                            name="+"
+                            value="+"
+                            Onclick="hacerOperacion(calculadora.visor,'+')"
+                        />
+                        <input
+                            type="button"
+                            name="="
+                            value="="
+                            Onclick="igual(calculadora.visor)"
+                        />
+                    </p>
+                </form>
+            </div>
+        </div>
+    </body>
 </html>

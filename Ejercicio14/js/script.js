@@ -1,29 +1,68 @@
-// Crear array
-var valores = [true, 5, false, "hola", "adios", 2]
+var textoVisor = "";
+var operador1 = 0;
+var operador2 = 0;
+var operacion = "";
 
-var texto1 = valores[3].length;
-var texto2 = valores[4].length;
-
-
-if(texto1 > texto2){
-    console.log(valores[3] + " es más grande")
-
-} else if(texto2 > texto1){
-    console.log(valores[4] + " es más grande")
-
-} else{
-    console.log(valores[3] + " y " + valores[4] + " Son iguales de tamaño")
+// Añadimos numeros en el visor
+function anadirNumero(visor, numero) {
+    textoVisor = textoVisor + numero;
+    visor.value = textoVisor;
 }
 
-console.log("Los valores booleanos son: " + valores[0] + " " + valores[2])
+// Hace las operaciones + | - | * | /
+function hacerOperacion(visor, op) {
+    operador1 = textoVisor;
+    operacion = op;
+    textoVisor = "";
+}
 
-var num1 = valores[1];
-var num2 = valores[5];
+// Hace operacion Raiz
+function raiz(visor, numero) {
+    result = Math.sqrt(numero);
+    visor.value = result;
+    return result;
+}
 
-console.log("La suma: " + num1 + num2 + "\n" +
-            "La resta: " + (num1 - num2) + "\n" +
-            "La multiplicacion: " + num1 * num2 + "\n" +
-            "La division: " + num1 / num2 + "\n" +
-            "El exponenet: " + Math.pow(num1, num2))
+//Hace el porcentaje
+function porcentaje(visor, numero) {
+    result = numero / 100;
+    visor.value = result;
+    return result;
+}
 
+//El inverso de un número A es 1/A ya que A * 1/A = 1 (por ejemplo, el inverso de 5 es 1/5)
+function inversa(visor, numero) {
+    result = 1 / numero;
+    visor.value = result;
+    return result;
+}
 
+//Añade o quita "-""
+function masmenos(visor) {
+    result = -textoVisor;
+    visor.value = result;
+    textoVisor = result;
+    return result;
+}
+
+//Evalua los operadores y la operacion, muestra el resultado en el visor
+function igual(visor) {
+    operador2 = textoVisor;
+    result = eval(operador1 + operacion + operador2);
+    visor.value = result;
+    textoVisor = result;
+    return result;
+}
+
+//Vacia el visor
+function c(visor) {
+    visor.value = "";
+    textoVisor = "";
+}
+
+//Elimina la primera posicion
+function retr(visor) {
+    result = textoVisor.substring(0, textoVisor.length - 1);
+    textoVisor = result;
+    visor.value = result;
+}
